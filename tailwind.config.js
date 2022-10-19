@@ -6,10 +6,13 @@ module.exports = {
     extend: {
       colors: {
         main: "#000000",
+        textColor: "#02073E",
+        mainColor: "#EA3A60",
+        pColor: "#343D48",
       },
       fonts: {
-        body: "'DM Sans', sans-serif",
-        heading: "'DM Sans', sans-serif",
+        body: "DM Sans', sans-serif",
+        heading: "DM Sans', sans-serif",
       },
     },
   },

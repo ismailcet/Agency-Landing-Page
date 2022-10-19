@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .contentSection span,
+  .ourServices span {
+    display: block;
+  }
+
+  .btn {
+    background-color: #ea3a60;
+    padding: 0.75rem 1.875rem;
+    border: 1.5px solid transparent;
+    border-radius: 3.125rem;
+    text-transform: capitalize;
+    transition: all 0.5s linear;
+  }
+  .btn-started {
+    background-color: transparent;
+    border: 1.5px solid #ea3a60;
+    color: #ea3a60;
+  }
+  .btn-started:hover {
+    background-color: #ea3a60 !important;
+    color: #fff !important;
+  }
+  .btn:hover {
+    border: 1.5px solid #ea3a60;
+    background-color: transparent;
+    color: #ea3a60;
+  }
+  .top-middle {
+    top: 20%;
+  }
+  .top-middle-xl {
+    top: 47%;
+  }
+  .features-items {
+    padding: 0 2rem;
+  }
+  .features-items .item-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .ourServices .item-img {
+    width: 11rem;
+    height: 11rem;
+  }
+  .services-patterns {
+    z-index: -1;
+    top: 182px;
+    left: -120px;
+    width: 65%;
+  }
+}

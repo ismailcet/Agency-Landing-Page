@@ -1,11 +1,12 @@
 import React from "react";
-import { leftImg } from "../assets/shape-left.png";
-import { rightImg } from "../assets/shape-right.png";
+
 import Navbar from "./Navbar";
+import HeaderContent from "./HeaderContent";
 const Header = () => {
   return (
     <section className="header">
       <Navbar />
+      <HeaderContent />
     </section>
   );
 };

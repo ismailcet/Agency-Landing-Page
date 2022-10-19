@@ -13,7 +13,7 @@ import Team from "../Components/Team";
 
 const Home = () => {
   return (
-    <div className="h-full flex flex-col pt-4 xl:px-[16rem] lg:px-32 font-body">
+    <div className="h-full flex flex-col pt-4 xl:px-[16rem] lg:px-32 font-body text-textColor">
       <Header />
       <Features />
       <OurServices />

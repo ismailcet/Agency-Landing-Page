@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-      <button className="btn-started">get started</button>
+      <button className="btn btn-started">get started</button>
     </nav>
   );
 };
