@@ -15,7 +15,7 @@ const Features = () => {
           Meet the feature of product
         </h3>
       </div>
-      <div className="features-items grid grid-cols-4 gap-4 align-middle justify-items-center">
+      <div className="features-items grid grid-cols-4 gap-4 items-center justify-items-center">
         <div className="features-item">
           <div className="item-img">
             <img src={performance} alt="Performance" />

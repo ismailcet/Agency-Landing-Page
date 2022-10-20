@@ -5,6 +5,7 @@ import Clients from "../Components/Clients";
 import Features from "../Components/Features";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import CoreFeatures from "../Components/CoreFeatures";
 import HowWork from "../Components/HowWork";
 import News from "../Components/News";
 import OurServices from "../Components/OurServices";
@@ -13,11 +14,12 @@ import Team from "../Components/Team";
 
 const Home = () => {
   return (
-    <div className="h-full flex flex-col pt-4 xl:px-[16rem] lg:px-32 font-body text-textColor">
+    <div className="h-full flex flex-col pt-4 xl:px-[16rem] lg:px-32 font-body text-textColor overflow-hidden">
       <Header />
       <Features />
       <OurServices />
       <AllFeatures />
+      <CoreFeatures />
       <HowWork />
       <Pricing />
       <Team />

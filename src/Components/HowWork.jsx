@@ -1,7 +1,7 @@
 import React from "react";
 
 const HowWork = () => {
-  return <div>HowWork</div>;
+  return <section className="howWork mt-40 w-max[100%]">HowWork</section>;
 };
 
 export default HowWork;

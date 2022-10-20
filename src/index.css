@@ -53,4 +53,14 @@
     left: -120px;
     width: 65%;
   }
+  .rightCore > .coreImg {
+    max-width: 620.57px;
+  }
+  .rightCore .patternLeft {
+    position: absolute;
+    z-index: -1;
+    top: 35%;
+    right: -45%;
+    width: 80%;
+  }
 }
