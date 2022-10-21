@@ -17,12 +17,12 @@ const HeaderContent = () => {
       <img
         src={leftImg}
         alt=""
-        className="lg:w-2/4 absolute lg:left-[-24%] xl:left-[-30%] 2xl:left-[-24%] lg:top-30 xl:top-80 2xl:top-10 z-[-1]"
+        className="lg:w-2/4 absolute lg:left-[-24%] xl:left-[-30%] 2xl:left-[-26%] lg:top-30 xl:top-80 2xl:top-10 z-[-1]"
       />
       <img
         src={rightImg}
         alt=""
-        className="lg:w-2/4 absolute lg:right-[-24%] xl:right-[-30%] 2xl:right-[-24%] lg:top-middle xl:top-middle-xl 2xl:top-middle z-[-1]"
+        className="lg:w-2/4 absolute lg:right-[-24%] xl:right-[-30%] 2xl:right-[-26%] lg:top-middle xl:top-middle-xl 2xl:top-middle z-[-1]"
       />
       <div className="content-img flex align-middle justify-center mt-8">
         <img src={HeaderImg} alt="Banner Content" />
