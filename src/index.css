@@ -63,4 +63,24 @@
     right: -45%;
     width: 80%;
   }
+  .btn-pricing {
+    transition: all 0.3s linear;
+  }
+  .active {
+    color: #0f2137;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgb(38 78 118 / 10%);
+  }
+  .pricing-item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    border: 1px solid rgba(38, 78, 118, 0.1);
+    border-radius: inherit;
+    transition: all 0.3s ease 0s;
+    z-index: -1;
+  }
 }
