@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { TiTickOutline } from "react-icons/ti";
+import { motion } from "framer-motion";
 const Pricing = () => {
   const [active, setActive] = useState("month");
 
@@ -7,10 +8,6 @@ const Pricing = () => {
     e.preventDefault();
     setActive(e.target.value);
   };
-
-  useEffect(() => {
-    console.log(active);
-  }, [active]);
 
   return (
     <section className="pricing mt-40 flex flex-col items-center ">
@@ -43,117 +40,140 @@ const Pricing = () => {
         </button>
       </div>
       <div className="pricing-options pt-[3.125rem]">
-        <div className="monthly-options flex items-center justify-center mx-auto">
-          <div className="pricing-item free w-[390px] flex-[1_1_auto] relative px-[64px] py-[40px]">
-            <h4 className="options-name text-[22px] font-bold mb-[6px]">
-              Free Plan
-            </h4>
-            <p className="options-info text-[1rem] font-normal mb-[40px]">
-              For Small teams or office
-            </p>
-            <ul className="options-lists">
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Drag & Drop Builder</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>1,000's of Templates</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Blog Support Tools</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>eCommerce Store </span>
-              </li>
-            </ul>
-            <h4 className="options-price"></h4>
-            <button className="btn btn-option"></button>
+        <motion.div
+          className="box"
+          key={active}
+          initial={{ y: 10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.9 }}
+        >
+          <div className="monthly-options flex items-center justify-center mx-auto gap-[2rem]">
+            <div className="pricing-item free flex flex-col w-[390px] flex-[1_1_auto] relative px-[64px] py-[75px]">
+              <h4 className="options-name text-[22px] font-bold mb-[6px]">
+                Free Plan
+              </h4>
+              <p className="options-info text-[1rem] font-normal mb-[40px]">
+                For Small teams or office
+              </p>
+              <ul className="options-lists mb-[3.25rem]">
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Drag & Drop Builder</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>1,000's of Templates</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Blog Support Tools</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>eCommerce Store </span>
+                </li>
+              </ul>
+              <h4 className="options-price flex items-center justify-center mb-[2.25rem]">
+                <span className="text-[30px] font-bold">$0</span>{" "}
+                <span>/Monthly</span>
+              </h4>
+              <button className="btn btn-option text-white font-semibold">
+                Start free trail
+              </button>
+            </div>
+            <div className="pricing-item business flex flex-col w-[390px] flex-[1_1_auto] relative  px-[64px] py-[75px]">
+              <h4 className="options-name text-[22px] font-bold mb-[6px]">
+                Business Plan
+              </h4>
+              <p className="options-info text-[1rem] font-normal mb-[40px]">
+                For Enterprise business
+              </p>
+              <ul className="options-lists mb-[3.25rem]">
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Drag & Drop Builder</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>1,000's of Templates</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Blog Support Tools</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>eCommerce Store </span>
+                </li>
+              </ul>
+              <h4 className="options-price flex items-center justify-center mb-[2.25rem]">
+                <span className="text-[30px] font-bold">$15</span>{" "}
+                <span>/Monthly</span>
+              </h4>
+              <button className="btn btn-option text-white font-semibold">
+                Create account
+              </button>
+            </div>
+            <div className="pricing-item pro flex flex-col w-[390px] flex-[1_1_auto] relative px-[64px] py-[75px]">
+              {" "}
+              <h4 className="options-name text-[22px] font-bold mb-[6px]">
+                Pro Master
+              </h4>
+              <p className="options-info text-[1rem] font-normal mb-[40px]">
+                For pro level developers
+              </p>
+              <ul className="options-lists mb-[3.25rem]">
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Drag & Drop Builder</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>1,000's of Templates</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>Blog Support Tools</span>
+                </li>
+                <li className="options-item flex items-center gap-[1rem]">
+                  <button className="tick bg-mainColor rounded-full text-[1.25rem] text-white">
+                    <TiTickOutline />
+                  </button>{" "}
+                  <span>eCommerce Store </span>
+                </li>
+              </ul>
+              <h4 className="options-price flex items-center justify-center mb-[2.25rem]">
+                <span className="text-[30px] font-bold">$24</span>{" "}
+                <span>/Monthly</span>
+              </h4>
+              <button className="btn btn-option text-white font-semibold">
+                Create account
+              </button>
+            </div>
           </div>
-          <div className="pricing-item business w-[390px] flex-[1_1_auto] relative  px-[64px] py-[40px]">
-            <h4 className="options-name text-[22px] font-bold mb-[6px]">
-              Business Plan
-            </h4>
-            <p className="options-info text-[1rem] font-normal mb-[40px]">
-              For Enterprise business
-            </p>
-            <ul className="options-lists">
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Drag & Drop Builder</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>1,000's of Templates</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Blog Support Tools</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>eCommerce Store </span>
-              </li>
-            </ul>
-            <h4 className="options-price"></h4>
-            <button className="btn btn-option"></button>
-          </div>
-          <div className="pricing-item pro w-[390px] flex-[1_1_auto] relative px-[64px] py-[40px]">
-            {" "}
-            <h4 className="options-name text-[22px] font-bold mb-[6px]">
-              Pro Master
-            </h4>
-            <p className="options-info text-[1rem] font-normal mb-[40px]">
-              For pro level developers
-            </p>
-            <ul className="options-lists">
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Drag & Drop Builder</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>1,000's of Templates</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>Blog Support Tools</span>
-              </li>
-              <li className="options-item">
-                <button className="tick">
-                  <TiTickOutline />
-                </button>{" "}
-                <span>eCommerce Store </span>
-              </li>
-            </ul>
-            <h4 className="options-price"></h4>
-            <button className="btn btn-option"></button>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -68,8 +68,11 @@
   }
   .active {
     color: #0f2137;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     box-shadow: 0 3px 4px rgb(38 78 118 / 10%);
+  }
+  .pricing-item {
+    transition: all 0.3s linear;
   }
   .pricing-item::before {
     position: absolute;
@@ -79,8 +82,15 @@
     left: 0px;
     height: 100%;
     border: 1px solid rgba(38, 78, 118, 0.1);
-    border-radius: inherit;
+    border-radius: 1.25rem;
     transition: all 0.3s ease 0s;
     z-index: -1;
+  }
+  .pricing-item:hover {
+    box-shadow: rgb(38 78 118 / 10%) 0px 4px 25px !important;
+    border-radius: 1.25rem;
+  }
+  .pricing-item:hover::before {
+    opacity: 0;
   }
 }
