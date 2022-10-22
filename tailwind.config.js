@@ -17,6 +17,9 @@ module.exports = {
         body: "DM Sans', sans-serif",
         heading: "DM Sans', sans-serif",
       },
+      objectPosition: {
+        "center-top": "center top",
+      },
     },
   },
   plugins: [],

@@ -93,4 +93,30 @@
   .pricing-item:hover::before {
     opacity: 0;
   }
+  .social-icons {
+    opacity: 0;
+    transition: all 0.25s;
+  }
+  .icon {
+    transition: all 0.25s;
+  }
+  .team-card:hover .social-icons {
+    opacity: 1;
+  }
+  .team-card:hover .icon {
+    padding: 5px 0;
+  }
+  .team-card:hover .icon:hover {
+    color: #000;
+    font-size: 17px;
+  }
+  .people-info {
+    transition: all 0.25s linear;
+  }
+  .team-card:hover .people-info {
+    color: #ea3a60;
+  }
+  .team-card:hover {
+    box-shadow: 0 4px 10px rgb(39 83 123 / 12%);
+  }
 }
