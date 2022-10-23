@@ -18,13 +18,13 @@ const TeamCard = ({ user }) => {
         </p>
       </div>
       <div className="social-icons text-mainColor absolute right-4 bottom-5 flex flex-col pt-[10px] items-center justify-center">
-        <a href="#" className="icon text-base">
+        <a href="https://github.com/ismailcet" className="icon text-base">
           <FaFacebookF />
         </a>
-        <a href="#" className="icon">
+        <a href="https://github.com/ismailcet" className="icon">
           <FaTwitter />
         </a>
-        <a href="#" className="icon">
+        <a href="https://github.com/ismailcet" className="icon">
           <FaInstagram />
         </a>
       </div>
