@@ -1,0 +1,60 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+.slick-slider {
+  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.slick-list {
+  display: flex;
+
+  width: 1180px;
+}
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.slick-slide {
+  width: 393px !important;
+}
+.slick-slide > div {
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: rgb(38 78 118 / 35%) 0px 0px 1px;
+  transition: all 0.3s ease 0s;
+  margin: 30px 20px 40px 20px;
+  padding: 2rem 2.5rem;
+  border-radius: 6px;
+  background-color: white;
+  width: 393px !important;
+}
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  z-index: 2;
+}
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: -5%;
+  z-index: 2;
+}
+.slick-prev::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ea3a60 !important;
+}
+.slick-next::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 3rem;
+  color: #ea3a60 !important;
+}
